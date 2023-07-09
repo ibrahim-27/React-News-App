@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import imagePlaceholder from "../image-placeholder.jpg"
 
 export default class NewsItem extends Component {
   render() {
     let {title, desc, imgUrl, url} = this.props;
     return (
-    <div className="flex flex-col justify-between w-72 md:w-64 h-auto rounded shadow-lg mx-auto">
-        <img className="w-full" src={imgUrl} alt="" />
+    <div className="flex flex-col justify-between w-72 md:w-64 h-auto rounded shadow-2xl mx-auto">
+        <img className="w-full max-h-48" src={imgUrl?imgUrl:imagePlaceholder} alt="" />
         <div className="px-2 py-2">
           <div className="font-bold text-lg leading-tight line-clamp-2">{title}</div>
           <p className="text-gray-700 text-sm line-clamp-3 my-1">{desc}</p>

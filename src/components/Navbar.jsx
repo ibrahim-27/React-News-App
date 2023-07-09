@@ -5,7 +5,7 @@ export default class Navbar extends Component {
     return (
       <div className='bg-blue-800 flex flex-col gap-2 items-center py-2 px-4 lg:flex-row lg:justify-between'>
         <div>
-            <h1 className='font-bold text-2xl text-blue-100'>NewsMonkey</h1>
+            <h1 className='font-bold text-2xl text-blue-100'><a href="/">NewsMonkey</a></h1>
         </div>
         <div>
             <ul className='flex gap-6 text-blue-100'>
