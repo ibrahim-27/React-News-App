@@ -6,7 +6,7 @@ export default class NewsItem extends Component {
   render() {
     let {title, desc, imgUrl, url, author, date, source} = this.props;
     return (
-    <div className="flex flex-col justify-between w-72 md:w-64 h-auto rounded shadow-2xl mx-auto">
+    <div className="flex flex-col justify-between w-72 md:w-64 h-auto rounded shadow-2xl mx-auto cursor-pointer">
         <div>
           <Badge text={source}/>
           <img className="w-full max-h-48" src={imgUrl?imgUrl:imagePlaceholder} alt="" />

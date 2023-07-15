@@ -15,12 +15,16 @@ export default class Navbar extends Component {
   }
 
   OnSearchClick = () => {
+    if(!this.state){
+      this.props.search("");
+      return;
+    }
     this.props.search(this.state.queryText);
   }
 
   render() {
     return (
-      <div className='bg-blue-800 flex flex-col gap-2 items-center py-2 px-4 lg:flex-row lg:justify-between'>
+      <div className='bg-blue-800 flex flex-col gap-2 items-center py-2 px-4 fixed w-full lg:flex-row lg:justify-between'>
         <div>
           <h1 className='font-bold text-2xl text-blue-100'>
             <Link to="/">NewsMonkey</Link>
